@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    /* overflow: hidden; */
 }
 
 body {
@@ -8,7 +7,6 @@ body {
     padding: 0%;
     max-width: 100%;
     min-height: 100vh;
-    background-color: aqua;
     font-family: 'Epilogue', sans-serif;
     overflow-x: hidden;
 }
@@ -81,7 +79,6 @@ nav {
 
 button {
     margin: auto;
-    width: 80%;
     aspect-ratio: 5/1;
     font-size: 14px;
     cursor: pointer;
@@ -89,20 +86,22 @@ button {
 
 .login-button {
     border: none;
+    width: 80%;
     background-color: transparent;
 }
 
 .register-button {
     background-color: transparent;
+    width: 80%;
     border-radius: 12px;
     border: 1px solid black;
 }
 
 
-/* 
+
 main {
     width: 100%;
-    background-color: aqua;
+    margin: 1rem auto;
 }
 
 #mobile-image {
@@ -111,4 +110,52 @@ main {
 
 #desktop-image {
     display: none;
-} */
+}
+.text{
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.main-text{
+    font-size: 2rem;
+    margin: auto;
+}
+
+.text p{
+color: hsl(0, 0%, 41%);
+}
+
+.cta-button{
+    width: 100%;
+    margin: auto;
+    text-align: center; 
+    margin: 2rem auto;
+}
+.cta-button button{
+    width: 50%;
+    color: aliceblue;
+    background-color: black;
+    border: none;
+    border-radius: 16px;
+    aspect-ratio: 4/1;
+    font-size: large;
+   
+}
+
+.client{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+.client img{
+    width: 20%;
+    object-fit: contain;
+}
+
+.attribution{
+    text-align: center;
+    margin: 1rem;
+}
