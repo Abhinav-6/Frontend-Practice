@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <link rel="stylesheet" href="./style.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li>Features</li>
-        <li>Company</li>
-        <li>Careers</li>
-        <li>About</li>
-      </ul>
-      <ul>
-        <li>Login</li>
-        <li>Register</li>
-      </ul>
-    </nav>
-    <main>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="/images/logo.svg" alt="" />
+    </div>
+    <div>
+      <img src="/images/icon-menu.svg" alt="" id="open-menu" />
+    </div>
+
+
+
+    <div class="burger-nav" id="burger-nav">
+      <div class="close-menu-div">
+        <img src="/images/icon-close-menu.svg" alt="" id="close-menu" />
+      </div>
+      <div class="burger-nav-items">
+        <div class="burger-nav-item">
+          <h3>Features </h3>
+          <img src="/images/icon-arrow-down.svg" alt="" class="down-arrow-icon" id="features-down-arrow-icon" />
+        </div>
+        <div class="burger-nav-item">
+          <h3>Company</h3>
+          <img src="/images/icon-arrow-down.svg" alt="" class="down-arrow-icon" id="features-down-arrow-icon" />
+        </div>
+        <div class="burger-nav-item">
+          <h3>Careers</h3>
+        </div>
+        <div class="burger-nav-item">
+          <h3>About</h3>
+        </div>
+
+      </div>
+      <div class="buttons">
+        <button class="login-button">Log In</button>
+        <button class="register-button">Register</button>
+      </div>
+    </div>
+  </nav>
+  <!-- <main>
+      <div class="image">
+        <img
+          id="desktop-image"
+          src="/images/image-hero-desktop.png"
+          alt="Hero Image"
+        />
+        <img
+          id="mobile-image"
+          src="/images/image-hero-mobile.png"
+          alt="Hero Image"
+        />
+      </div>
       <div class="text">
         <h1>Make remote work</h1>
         <p>
@@ -47,9 +78,6 @@
         </p>
         <button>Learn more</button>
       </div>
-      <div class="image">
-        <img src="/images/image-hero-desktop.png" alt="" />
-      </div>
     </main>
 
     <div class="attribution">
@@ -57,6 +85,7 @@
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
+    </div> -->
+</body>
+
 </html>

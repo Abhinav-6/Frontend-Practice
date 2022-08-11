@@ -1,15 +1,114 @@
-*{
+* {
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
-body{
+body {
     margin: 0;
     padding: 0%;
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
-    color: blue;
+    background-color: aqua;
+    font-family: 'Epilogue', sans-serif;
+    overflow-x: hidden;
 }
 
-img{
-    object-fit: contain;
+nav {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
+
+.burger-nav {
+    overflow: hidden;
+    transition: 1s all ease;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    padding: 1.5rem 0 0 0;
+    box-shadow: -10px -10px 100px rgb(160, 160, 160);
+    transform: translateX(100%);
+    display: none;
+}
+
+.close-menu-div {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+
+#close-menu {
+    width: 25px;
+    height: 25px;
+}
+
+.burger-nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.burger-nav-item {
+    width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: hsl(0, 0%, 41%);
+}
+
+
+.down-arrow-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 0.3rem;
+}
+
+button {
+    margin: auto;
+    width: 80%;
+    aspect-ratio: 5/1;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login-button {
+    border: none;
+    background-color: transparent;
+}
+
+.register-button {
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+
+/* 
+main {
+    width: 100%;
+    background-color: aqua;
+}
+
+#mobile-image {
+    width: 100%;
+}
+
+#desktop-image {
+    display: none;
+} */
