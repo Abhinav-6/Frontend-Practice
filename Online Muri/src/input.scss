@@ -1,6 +1,26 @@
 $bg-color: #FFF8F2;
 $primary-color: #562E08;
 $secondary-color: #F8964F;
+$primary-font: Arial, Helvetica, sans-serif;
+$secondary-font: 'Archivo', sans-serif;
+$nav-text-color: #562E08;
+$normal-font-size: 18px;
+
+@mixin flex-box($justify-content: center, $flex-direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+@mixin Btn {
+    border: none;
+    background-color: $secondary-color;
+    color: white;
+    cursor: pointer;
+    font-size: $normal-font-size;
+    font-weight: 700;
+}
 
 
 * {
@@ -10,19 +30,58 @@ $secondary-color: #F8964F;
 body {
     width: 100%;
     min-height: 100vh;
-    text-align: center;
-    padding: 0 2%;
+    margin: 0;
+    padding: 0 5%;
     background-color: $bg-color;
-    list-style: none;
+    font-family: $primary-font;
 }
 
-.primary{
+.primary {
     color: $primary-color;
 }
+
 .secondary {
     color: $secondary-color;
 }
 
-nav{
-    
+nav {
+    @include flex-box(space-between, row);
+    padding: 1rem 2% 0.8rem;
+    margin: auto;
+
+    #logo {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    #nav-items {
+        @include flex-box(space-around, row);
+        gap: 2rem;
+        list-style: none;
+        font-family: $secondary-font;
+        color: $nav-text-color;
+        font-size: $normal-font-size;
+        font-weight: 500;
+    }
+
+    #buttons {
+        @include flex-box(space-evenly, row);
+        gap: 1.5rem;
+
+        .signup{
+            background-color: transparent;
+            border: none;
+            font-family: $secondary-font;
+            font-size: $normal-font-size;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .login{
+            @include Btn;
+            width: 108px;
+            height: 47px;
+            border-radius: 116px;
+        }
+    }
 }

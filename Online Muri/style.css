@@ -5,10 +5,10 @@
 body {
   width: 100%;
   min-height: 100vh;
-  text-align: center;
-  padding: 0 2%;
+  margin: 0;
+  padding: 0 5%;
   background-color: #FFF8F2;
-  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .primary {
@@ -17,6 +17,57 @@ body {
 
 .secondary {
   color: #F8964F;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1rem 2% 0.8rem;
+  margin: auto;
+}
+nav #logo {
+  font-size: 30px;
+  font-weight: 900;
+}
+nav #nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
+  font-family: "Archivo", sans-serif;
+  color: #562E08;
+  font-size: 18px;
+  font-weight: 500;
+}
+nav #buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+nav #buttons .signup {
+  background-color: transparent;
+  border: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav #buttons .login {
+  border: none;
+  background-color: #F8964F;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  width: 108px;
+  height: 47px;
+  border-radius: 116px;
 }
 
 /*# sourceMappingURL=style.css.map */
