@@ -1,0 +1,28 @@
+$bg-color: #FFF8F2;
+$primary-color: #562E08;
+$secondary-color: #F8964F;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 2%;
+    background-color: $bg-color;
+    list-style: none;
+}
+
+.primary{
+    color: $primary-color;
+}
+.secondary {
+    color: $secondary-color;
+}
+
+nav{
+    
+}

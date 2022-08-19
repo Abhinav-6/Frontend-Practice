@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 2%;
+  background-color: #FFF8F2;
+  list-style: none;
+}
+
+.primary {
+  color: #562E08;
+}
+
+.secondary {
+  color: #F8964F;
+}
+
+/*# sourceMappingURL=style.css.map */
