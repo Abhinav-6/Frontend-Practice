@@ -36,12 +36,10 @@ $normal-font-size: 18px;
 
 * {
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body {
     width: 100%;
-    min-height: 100vh;
     margin: 0;
     padding: 0 5%;
     background-color: $bg-color;
@@ -59,11 +57,18 @@ body {
 nav {
     @include flex-box(space-between, row);
     padding: 1rem 2% 0.8rem;
-    margin: auto;
+    margin: 1rem;
+    width: 100%;
 
     #logo {
         font-size: 30px;
         font-weight: 900;
+    }
+
+    .open-menu {
+        margin-left: auto;
+        margin-right: 1rem;
+        display: none;
     }
 
     #nav-items {
@@ -74,6 +79,14 @@ nav {
         color: $nav-text-color;
         font-size: $normal-font-size;
         font-weight: 500;
+
+        .close-menu {
+            display: none;
+        }
+
+        #btns {
+            display: none;
+        }
     }
 
     #buttons {
@@ -94,6 +107,103 @@ nav {
             width: 108px;
             height: 47px;
             border-radius: 116px;
+        }
+    }
+
+    @include onTablet() {
+
+
+        #nav-items {
+            position: fixed;
+            right: 0;
+            top: 0;
+            margin: 0;
+            flex-direction: column;
+            background-color: #fff;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 3rem 2rem;
+            height: 100%;
+            width: 40%;
+            display: none;
+
+            .close-menu {
+                display: block;
+                margin-left: auto;
+                cursor: pointer;
+            }
+
+            #btns {
+                width: 100%;
+                @include flex-box(space-between, column);
+                gap: 1.5rem;
+
+                .signup {
+                    display: block;
+                    background-color: transparent;
+                    border: none;
+                    font-family: $secondary-font;
+                    font-size: $normal-font-size;
+                    font-weight: 700;
+                    cursor: pointer;
+                    margin: 0;
+                }
+
+                .login {
+                    display: block;
+                    @include Btn;
+                    width: 108px;
+                    height: 47px;
+                    border-radius: 116px;
+                }
+            }
+
+        }
+
+        .open-menu {
+            display: block;
+            cursor: pointer;
+        }
+
+        #buttons {
+            display: none;
+        }
+
+    }
+
+    @include onMobile() {
+        #logo {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        #nav-items {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 0;
+            flex-direction: column;
+            background-color: #fff;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 3rem 2rem;
+            height: 100%;
+            width: 80%;
+            display: none;
+
+            .close-menu {
+                display: block;
+                margin-left: auto;
+                cursor: pointer;
+            }
+        }
+
+        .open-menu {
+            display: block;
+        }
+
+        #buttons {
+            display: none;
         }
     }
 }
@@ -136,15 +246,41 @@ main {
             font-size: 18px;
         }
 
-        button {
-            @include Btn();
-            padding: 1.5rem;
-            border-radius: 45px;
-            margin-top: 3rem;
+        .btn {
+            width: 100%;
+            button {
+                @include Btn();
+                padding: 1.5rem;
+                border-radius: 45px;
+                margin-top: 3rem;
+            }
+
         }
 
     }
 
+
+    @include onTablet() {
+        flex-direction: column;
+
+        #left-side {
+            width: 100%;
+        }
+
+        #right-side {
+            width: 100%;
+
+            .btn {
+                width: 100%;
+                text-align: center;
+
+                button {
+                    margin: 1rem auto;
+                }
+            }
+
+        }
+    }
 
     @include onMobile() {
         @include flex-box(space-around, column);
@@ -152,7 +288,40 @@ main {
 
         #left-side {
             width: 100%;
+
+            img {
+                object-fit: contain;
+            }
         }
+
+        #right-side {
+            width: 100%;
+
+            .main-text {
+                font-size: 64px;
+
+                span {
+                    margin: -1rem 0 -0.8rem;
+                }
+            }
+
+            .disc-text {
+                font-size: 14px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                button {
+                    padding: 0.8rem;
+                    font-size: 12px;
+                    font-weight: 500;
+                    margin-top: 1.2rem;
+                }
+            }
+
+        }
+
     }
 }
 
@@ -165,7 +334,13 @@ footer {
     font-size: 18px;
     overflow: scroll;
     gap: 0.7rem;
+
     img {
         width: 18px;
+    }
+    @include onMobile(){
+        margin-top: 1rem;
+        justify-content: center;
+        font-size: 14px;
     }
 }

@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 body {
   width: 100%;
-  min-height: 100vh;
   margin: 0;
   padding: 0 5%;
   background-color: #FFF8F2;
@@ -26,11 +24,17 @@ nav {
   justify-content: space-between;
   flex-direction: row;
   padding: 1rem 2% 0.8rem;
-  margin: auto;
+  margin: 1rem;
+  width: 100%;
 }
 nav #logo {
   font-size: 30px;
   font-weight: 900;
+}
+nav .open-menu {
+  margin-left: auto;
+  margin-right: 1rem;
+  display: none;
 }
 nav #nav-items {
   display: flex;
@@ -43,6 +47,12 @@ nav #nav-items {
   color: #562E08;
   font-size: 18px;
   font-weight: 500;
+}
+nav #nav-items .close-menu {
+  display: none;
+}
+nav #nav-items #btns {
+  display: none;
 }
 nav #buttons {
   display: flex;
@@ -69,6 +79,95 @@ nav #buttons .login {
   width: 108px;
   height: 47px;
   border-radius: 116px;
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  nav #nav-items {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 0;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    height: 100%;
+    width: 40%;
+    display: none;
+  }
+  nav #nav-items .close-menu {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  nav #nav-items #btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  nav #nav-items #btns .signup {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0;
+  }
+  nav #nav-items #btns .login {
+    display: block;
+    border: none;
+    background-color: #F8964F;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    width: 108px;
+    height: 47px;
+    border-radius: 116px;
+  }
+  nav .open-menu {
+    display: block;
+    cursor: pointer;
+  }
+  nav #buttons {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  nav #logo {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  nav #nav-items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    height: 100%;
+    width: 80%;
+    display: none;
+  }
+  nav #nav-items .close-menu {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  nav .open-menu {
+    display: block;
+  }
+  nav #buttons {
+    display: none;
+  }
 }
 
 main {
@@ -106,7 +205,10 @@ main #right-side .disc-text {
   word-wrap: normal;
   font-size: 18px;
 }
-main #right-side button {
+main #right-side .btn {
+  width: 100%;
+}
+main #right-side .btn button {
   border: none;
   background-color: #F8964F;
   color: white;
@@ -116,6 +218,24 @@ main #right-side button {
   padding: 1.5rem;
   border-radius: 45px;
   margin-top: 3rem;
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  main #left-side {
+    width: 100%;
+  }
+  main #right-side {
+    width: 100%;
+  }
+  main #right-side .btn {
+    width: 100%;
+    text-align: center;
+  }
+  main #right-side .btn button {
+    margin: 1rem auto;
+  }
 }
 @media (min-width: 320px) and (max-width: 425px) {
   main {
@@ -127,6 +247,31 @@ main #right-side button {
   }
   main #left-side {
     width: 100%;
+  }
+  main #left-side img {
+    object-fit: contain;
+  }
+  main #right-side {
+    width: 100%;
+  }
+  main #right-side .main-text {
+    font-size: 64px;
+  }
+  main #right-side .main-text span {
+    margin: -1rem 0 -0.8rem;
+  }
+  main #right-side .disc-text {
+    font-size: 14px;
+  }
+  main #right-side .btn {
+    width: 100%;
+    text-align: center;
+  }
+  main #right-side .btn button {
+    padding: 0.8rem;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 1.2rem;
   }
 }
 
@@ -141,6 +286,13 @@ footer {
 }
 footer img {
   width: 18px;
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  footer {
+    margin-top: 1rem;
+    justify-content: center;
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

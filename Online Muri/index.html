@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Online Muri</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,12 +18,19 @@
         <div id="logo">
             <span class="primary">Online</span><span class="secondary">Muri</span>
         </div>
+        <img src="/assets/icon-menu.svg" alt="" class="open-menu" id="open">
         <ul id="nav-items">
+            <img src="/assets/icon-close-menu.svg" alt="" class="close-menu" id="close">
             <li>Home</li>
             <li>Process</li>
             <li>Flavours</li>
             <li>Order History</li>
             <li>Blog</li>
+            <div id="btns">
+                <button class="signup">Sign Up</button>
+                <button class="login">Log In</button>
+            </div>
+
         </ul>
         <div id="buttons">
             <button class="signup">Sign Up</button>
@@ -46,7 +54,9 @@
                     workers, musician, farmer, builder, reporter, soldier and many more
                 </p>
             </div>
-            <button>Choose Flavour</button>
+            <div class="btn">
+                <button>Choose Flavour</button>
+            </div>
         </div>
     </main>
     <footer>
