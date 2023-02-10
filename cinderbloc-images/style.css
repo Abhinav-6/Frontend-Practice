@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(10, 10, 10);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  padding: clamp(1rem, 5vw, 6rem);
+}
+
+nav>a {
+  text-decoration: none;
+  color: rgba(256, 256, 256, 0.25);
+  transition: border 20ms ease;
+  padding: 1rem;
+  position: relative;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+nav>a:hover {
+  color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+}
+
+
+nav>a>span {
+  font-size: 2rem;
+  position: relative;
+}
+
+nav>a:hover>span {
+  z-index: 2;
+}
+
+nav>a>img {
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transfrom 250ms, opacity 250ms;
+  width: min(40vw, 500px);
+  pointer-events: none;
+}
+
+nav>a:hover>img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  /* animation: show 500ms ease-in-out 1; */
+}
+
+@keyframes show {
+  0% {
+    transform: scale(1);
+  }
+
+  /* 10% {
+    transform: scale(0.1);
+  }
+
+  20% {
+    transform: scale(0.2);
+  }
+
+  30% {
+    transform: scale(0.3);
+  }
+
+  40% {
+    transform: scale(0.4);
+  } */
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes border {
+  0% {
+    border-top-width: 0%;
+    border-bottom-width: 1px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  20% {
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  40% {
+    border-top-width: 40px;
+    border-bottom-width: 40px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  60% {
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  80% {
+    border-top-width: 80px;
+    border-bottom-width: 80px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+  100% {
+    border-bottom-width: 100px;
+    border-top-width: 100px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+
+}
